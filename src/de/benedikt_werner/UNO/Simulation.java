@@ -37,7 +37,9 @@ public class Simulation implements GameOverListener {
 			players[i] = new Player("AI_" + i + "", AdvancedAIController.class);
 		}
 		
+		wins = new int[botCount + aiCount];
 		game = new Game(players);
+		game.addGameOverListener(this);
 	}
 	
 	public void simulate(int count) {

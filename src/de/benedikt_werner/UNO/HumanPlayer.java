@@ -5,6 +5,16 @@ import java.util.Scanner;
 public class HumanPlayer extends PlayerController {
 	private Scanner in = new Scanner(System.in);
 	
+	public static void main(String[] args) {
+		Player[] players = new Player[2];
+
+		players[0] = new Player("Bene", HumanPlayer.class);
+		players[1] = new Player("Computer", AdvancedAIController.class);
+		
+		Game game = new Game(players);
+		game.start();
+	}
+	
 	public HumanPlayer(Player player) {
 		super(player);
 	}

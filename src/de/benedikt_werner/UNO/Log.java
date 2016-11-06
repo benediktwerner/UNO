@@ -2,7 +2,7 @@ package de.benedikt_werner.UNO;
 
 
 public class Log {
-	private static final LogLevel LOG_LEVEL = LogLevel.SILENT;
+	private static final LogLevel LOG_LEVEL = LogLevel.STANDARD;
 	
 	public static void debug(Object o) {
 		if (LOG_LEVEL == LogLevel.DEBUG)
